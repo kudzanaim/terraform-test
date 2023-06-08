@@ -76,6 +76,7 @@ app.get('/cloud-run/dlt/:userid/:instance_id', async(request, response) => {
     return response.send({success: true, instance})
 })
 
+// Fetch instance
 app.get('/rsc/:id/:instance_id', async(request, response) => {
     const {instance_id, id} = request.params
     const {q} = request.query
@@ -85,7 +86,7 @@ app.get('/rsc/:id/:instance_id', async(request, response) => {
     db.database().ref(`/instances/${instance_id}`).update(doneUpdate)
     return response.send({
         instance_id, 
-        success: true
+        success: instance_id ? true : false
     })
 })
 
