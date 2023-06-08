@@ -1,0 +1,159 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #f3f3f3;
+    font-family: -webkit-pictograph;
+}
+
+.nav {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-family: arial;
+    font-size: 12px;
+    color: #d6d6d6;
+    background: #1f1e1e;
+    /* box-shadow: 0px 0px 11px -5px #e2e2e2; */
+}
+
+.instance-containers {
+    padding: 30px;
+    padding-top: 10px;
+}
+
+.form {
+    background: #fdfdfd;
+    padding: 10px 30px;
+    border-bottom: solid 1px #e8e8e8;
+    height: 195px;
+}
+
+.instance {
+    width: max-content;
+    padding: 20px;
+    background: #1f1e1e;
+    border-radius: 5px;
+    padding-right: 35px;
+    padding-left: 25px;
+    box-shadow: 0px 1px 13px #636363;
+}
+
+.instance-type {font-weight: bolder;font-size: 18px;color: white;}
+
+.instance-name, .instance-id, .instance-url {
+    margin-bottom: 4px;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.instancemetainn {
+    font-size: 12px;
+}
+
+.instancemeta {
+    position: relative;
+    left: 5px;
+    color: #dad9d9;
+    padding: 10px 0;
+}
+
+button.instance-btn {
+    border: none;
+    background: #585455;
+    color: white;
+    padding: 5px 10px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+label.label {
+    font-size: 12px;
+    display: block;
+    font-weight: bold;
+}
+
+input.terr-data {
+    border-radius: 0;
+    border: solid 1px black;
+    padding: 6px 10px;
+    margin: 6px 0;
+    width: 165px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.field {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+button.create {
+    background: #327cd8;
+    border: none;
+    color: white;
+    padding: 9px 20px;
+    font-size: 12px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px #636363;
+    cursor:pointer;
+    font-weight: bold;
+}
+
+.form-input {
+    width: max-content;
+    display: inline-block;
+    float: left;
+}
+
+.btn-container {
+    display: inline-block;
+    float: left;
+    position: relative;
+    top: 20px;
+    left: 10px;
+}
+
+
+.form-hdr-h {
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.form-hdr-p {
+    width: 615px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #464545;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.instance-section-hdr {
+    padding: 4px 0;
+    padding-top: 2px;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 30px;
+    margin-top: 2vw;
+}
+
+label.instance-lbl {
+    color: #989898;
+    font-size: 11px;
+}
+
+.instance-btns-hold {
+    text-align: right;
+}
+
+button.instance-btn:hover {
+    background: #c11636;
+    transition: 0.2s;
+}
