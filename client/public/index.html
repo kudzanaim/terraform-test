@@ -1,71 +1,77 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1"> 
-      <link rel="stylesheet" href="style.css">
-      <!-- update the version number as needed -->
-      <script defer src="/__/firebase/8.6.2/firebase-app.js"></script>
-      <!-- include only the Firebase features as you need -->
-      <script defer src="/__/firebase/8.6.2/firebase-auth.js"></script>
-      <script defer src="/__/firebase/8.6.2/firebase-database.js"></script>  
-      <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-    </head>
-    <body>
-        <div class="nav">
-          <div class="nav-inn">Terraform Cloud Run Manager</div>
-        </div>
-        <div class="app">
-          <div class="app-inn">
-            <div class="form">
-              <div class="form-inn">
-                <div class="form-hdr">
-                  <div class="form-hdr-h">Create Instance</div>
-                  <div class="form-hdr-p">Provisions stateless Cloud Run containers invocable via web requests. Services can be created/destroyed at a button.</div>
-                </div>
-                <div class="form-input">
-                  <div class="field">
-                    <label class="label">Name of Resource to create</label>
-                    <input class="terr-data resourcename" name="abc" placeholder="Resource" value="terratest005">
-                  </div>
-                  <div class="field">
-                    <label class="label">Project ID</label>
-                    <input class="terr-data projectid" placeholder="Your Project ID" value="freelance-275013">
-                  </div>
-                  <div class="field">
-                    <label class="label">Docker Image URL</label>
-                    <input class="terr-data imageurl" placeholder="Image URL" value="us.gcr.io/freelance-275013/rideapp/rides@sha256:484e60e057365b0335d2b37ba4097b93b1c5777c0e937580b229d21a53beecc2">
-                  </div>
-                </div>
-                <div class="btn-container">
-                  <div class="btn-inn">
-                    <button class="create" onclick="createResource()">Create Resource</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="instance-section-hdr">
-              <div class="instance-section">Active Instances</div>
-              <div class="form-hdr-p">Copy of your running instances. Destroyed containers are viewable in account history.</div>
-            </div>
-            <div class="instance-containers">
-              <div class="instances">
 
-              </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/8.6.2/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/8.6.2/firebase-auth.js"></script>
+  <script defer src="/__/firebase/8.6.2/firebase-database.js"></script>
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="nav-inn">Terraform Cloud Run Manager</div>
+  </div>
+  <div class="app">
+    <div class="app-inn">
+      <div class="form">
+        <div class="form-inn">
+          <div class="form-hdr">
+            <div class="form-hdr-h">Create Instance</div>
+            <div class="form-hdr-p">Provisions stateless Cloud Run containers invocable via web requests. Services can
+              be created/destroyed at a button.</div>
+          </div>
+          <div class="form-input">
+            <div class="field">
+              <label class="label">Name of Resource to create</label>
+              <input class="terr-data resourcename" name="abc" placeholder="Resource" value="terratest005">
+            </div>
+            <div class="field">
+              <label class="label">Project ID</label>
+              <input class="terr-data projectid" placeholder="Your Project ID" value="freelance-275013">
+            </div>
+            <div class="field">
+              <label class="label">Docker Image URL</label>
+              <input class="terr-data imageurl" placeholder="Image URL"
+                value="us.gcr.io/freelance-275013/rideapp/rides@sha256:484e60e057365b0335d2b37ba4097b93b1c5777c0e937580b229d21a53beecc2">
+            </div>
+          </div>
+          <div class="btn-container">
+            <div class="btn-inn">
+              <button class="create" onclick="createResource()">Create Resource</button>
             </div>
           </div>
         </div>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="./main.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                try {
-                  let app = firebase.app();
-                  let features = ['auth', 'database'].filter(feature => typeof app[feature] === 'function');
-                  userSignIn();
-                } 
-                catch (e) {alert(e.message)}
-            });
-        </script>
-    </body>
+      </div>
+      <div class="instance-section-hdr">
+        <div class="instance-section">Active Instances</div>
+        <div class="form-hdr-p">Copy of your running instances. Destroyed containers are viewable in account history.
+        </div>
+      </div>
+      <div class="instance-containers">
+        <div class="instances">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      try {
+        let app = firebase.app();
+        let features = ['auth', 'database'].filter(feature => typeof app[feature] === 'function');
+        userSignIn();
+      }
+      catch (e) { alert(e.message) }
+    })
+  </script>
+</body>
+
 </html>
